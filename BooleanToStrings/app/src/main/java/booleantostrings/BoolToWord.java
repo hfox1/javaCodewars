@@ -6,14 +6,7 @@ package booleantostrings;
 public class BoolToWord {
     public static String boolToWord(boolean b) {
 
-       String hello = "";
-
-        if (b == true) { 
-            hello = "Yes";
-        }
-        if (b == false) {hello ="No";}
-
-        return hello;
+    return b ? "Yes" : "No";
     }
 
     public static void main(String[] args) {
