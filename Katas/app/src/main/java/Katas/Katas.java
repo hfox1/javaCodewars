@@ -13,9 +13,22 @@ public class Katas {
     }
 
     public int listMin(int[] list) {
-        
+        int min = list[0];
+        int len = list.length;
+        for (int i = 0; i < len; i++) {
+            if ( list[i] < min ) {min = list[i];}
+        }
+        return min;
     }
     public int listMax(int[] list) {
+        int max = list[0];
+        int len = list.length;
+        for (int i = 0; i < len; i++) {
+            if ( list[i] > max ) {max = list[i];}
+        }
+        return max;    }
 
-    }
+        public int makeMove(int sticks) {
+return 1;
+        }
 }

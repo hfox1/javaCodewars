@@ -19,12 +19,19 @@ public class KatasTest {
         assertEquals("Hello boss", kat.pMessage("Helen", "Helen"));
         assertEquals("Hello guest", kat.pMessage("jim", "henrietta"));
     }
-    @Test public void test() {
+    @Test public void testMax() {
         Katas kat = new Katas();
-        assertEquals(-110, kat.listMin(new int[]{-52, 56, 30, 29, -54, 0, -110}));
-        assertEquals(0, kat.listMin(new int[]{42, 54, 65, 87, 0}));
         assertEquals(566, kat.listMax(new int[]{4,6,2,1,9,63,-134,566}));
         assertEquals(5, kat.listMax(new int[]{5}));
+        assertEquals(0, kat.listMin(new int[]{42, 54, 65, 87, 0}));
+        assertEquals(-110, kat.listMin(new int[]{-52, 56, 30, 29, -54, 0, -110}));
     }
+    
 
+    @Test public void test() {
+        Katas kat = new Katas();
+        assertEquals(3, kat.makeMove(3));
+
+
+}
 }
