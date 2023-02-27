@@ -29,6 +29,9 @@ public class Katas {
         return max;    }
 
         public int makeMove(int sticks) {
-return 1;
+        float gameStage = ((float)sticks)/4;
+        String remainder = "0" + String.valueOf(gameStage).substring(1);
+        float take = Float.parseFloat(remainder)*4;
+        return (int) take;
         }
 }
