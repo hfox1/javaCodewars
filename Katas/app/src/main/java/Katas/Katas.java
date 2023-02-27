@@ -12,4 +12,10 @@ public class Katas {
         return name.equals(owner) ? "Hello boss" : "Hello guest"; 
     }
 
+    public int listMin(int[] list) {
+        
+    }
+    public int listMax(int[] list) {
+
+    }
 }
