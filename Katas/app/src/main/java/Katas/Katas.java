@@ -35,4 +35,8 @@ public class Katas {
         // return (int) take;
 return sticks % 4;
         }
+
+        public int getCount(String str) {
+            return 0;
+        }
 }
