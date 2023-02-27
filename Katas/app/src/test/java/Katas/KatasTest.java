@@ -17,10 +17,10 @@ public class KatasTest {
         Katas kat = new Katas();
         assertEquals("Hello boss", kat.pMessage("jim", "jim"));
         assertEquals("Hello boss", kat.pMessage("Helen", "Helen"));
-    }
-    @Test public void testPMessage1() {
-        Katas kat = new Katas();
         assertEquals("Hello guest", kat.pMessage("jim", "henrietta"));
+    }
+    @Test public void test() {
+        Katas kat = new Katas();
     }
 
 }
