@@ -21,7 +21,5 @@ public class KatasTest {
         Katas kat = new Katas();
         assertEquals("Hello guest", kat.pMessage("jim", "henrietta"))
     }
-    @Test public void testOpposite3() {
-        Katas kat = new Katas();
-    }
+
 }
