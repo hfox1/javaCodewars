@@ -9,7 +9,7 @@ public class Katas {
     }
 
     public String pMessage(String name, String owner){
-        return name == owner ? "Hello boss" : "Hello guest"; 
+        return name.equals(owner) ? "Hello boss" : "Hello guest"; 
     }
 
 }
