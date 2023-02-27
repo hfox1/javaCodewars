@@ -3,12 +3,9 @@
  */
 package oppositenumber;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
+public class Opposite {
+    public int opposite(int number) {
+        return -number;
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-    }
 }

@@ -11,12 +11,12 @@ public class OppositeTest {
         Opposite opp = new Opposite();
         assertEquals(-1, opp.opposite(1));
     }
-    // @Test public void testOpposite2() {
-    //     Opposite opp = new Opposite();
-    //     assertEquals(-14, opp.opposite(14));
-    // }
-    // @Test public void testOpposite3() {
-    //     Opposite opp = new Opposite();
-    //     assertEquals(-34, opp.opposite(34));
-    // }
+    @Test public void testOpposite2() {
+        Opposite opp = new Opposite();
+        assertEquals(-14, opp.opposite(14));
+    }
+    @Test public void testOpposite3() {
+        Opposite opp = new Opposite();
+        assertEquals(-34, opp.opposite(34));
+    }
 }
