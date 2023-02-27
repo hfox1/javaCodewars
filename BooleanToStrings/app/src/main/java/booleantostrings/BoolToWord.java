@@ -5,10 +5,17 @@ package booleantostrings;
 
 public class BoolToWord {
     public static String boolToWord(boolean b) {
-        return "Hello World!";
+
+       String hello = "";
+
+        if (b == true) { 
+            hello = "Yes";
+        }
+        if (b == false) {hello ="No";}
+
+        return hello;
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
     }
 }
