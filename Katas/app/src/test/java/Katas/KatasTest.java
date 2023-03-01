@@ -49,11 +49,12 @@ public class KatasTest {
 }
     @Test public void testDigitSquared() {
         Katas kat = new Katas();
+        System.out.println("hello");
         assertEquals(811181, kat.squareDigits(9119));
         assertEquals(0, kat.squareDigits(0));
   
 }
-    @Test public void test() {
-        Katas kat = new Katas();
-}
+//     @Test public void test() {
+//         Katas kat = new Katas();
+// }
 }

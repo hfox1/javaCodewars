@@ -5,7 +5,6 @@ package Katas;
 import java.util.regex.*;
 import java.util.stream.*;
 
-import com.google.common.base.CharMatcher;
 
 public class Katas {
     public int opposite(int number) {
@@ -55,13 +54,13 @@ return sticks % 4;
             // return "";
         }
         public int squareDigits(int n) {
+            System.out.println("hello");
            String result = String.valueOf(n)
             .chars()
-            .mapToObj(e -> Integer.valueOf(e))
-            .map(i -> i^2)
-            .map(j -> String.valueOf(j))
-//            .collect(Collectors.joining(""));
+            .map(Character::getNumericValue)
+            .map(i -> i*i)
+            .mapToObj(j -> ""+j)
+            .collect(Collectors.joining(""));
             return Integer.valueOf(result);
-            // .map(s -> Integer.valueOf(s));
         }
 }

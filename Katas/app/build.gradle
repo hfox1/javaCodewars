@@ -24,6 +24,10 @@ dependencies {
     implementation 'com.google.guava:guava:31.1-jre'
 }
 
+test {
+    testLogging.showStandardStreams = true
+}
+
 application {
     // Define the main class for the application.
     mainClass = 'Katas.java'
