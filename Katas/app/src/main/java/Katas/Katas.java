@@ -55,12 +55,13 @@ return sticks % 4;
             // return "";
         }
         public int squareDigits(int n) {
-           return String.valueOf(n)
+           String result = String.valueOf(n)
             .chars()
             .mapToObj(e -> Integer.valueOf(e))
             .map(i -> i^2)
             .map(j -> String.valueOf(j))
-            .collect(Collectors.joining(""))
-            .mapToInt();
+//            .collect(Collectors.joining(""));
+            return Integer.valueOf(result);
+            // .map(s -> Integer.valueOf(s));
         }
 }
