@@ -8,10 +8,18 @@ import static org.junit.jupiter.api.Assertions.*;
 public class Kata2Test {
 
     @Test public void testSquareDigits() {
-        Kata2 kat = new Kata2();
-        assertEquals(811181, kat.squareDigits(9119));
-        System.out.println("expected " + 811181 + ", Received: " + kat.squareDigits(9119));
-        assertEquals(0, kat.squareDigits(0));
+        assertEquals(811181, Kata2.squareDigits(9119));
+        System.out.println("expected " + 811181 + ", Received: " + Kata2.squareDigits(9119));
+        assertEquals(0, Kata2.squareDigits(0));
+
+    }
+    @Test public void bmiTest() {
+        assertEquals("Underweight", Kata2.bmi(10, 3));
+        assertEquals("Normal", Kata2.bmi(100, 2));
+        assertEquals("Overweight", Kata2.bmi(101, 2));
+        assertEquals("Obese", Kata2.bmi(60, 1.3));
+    }
+    @Test public void aTest() {
 
     }
 }
