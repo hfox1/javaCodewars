@@ -52,12 +52,9 @@ public class Kata2 {
     }
 
     public static int nbDig(int n, int d) {
-        ArrayList<Integer> squares = new ArrayList();
-        for (int i = 0; i <= n; i++) {
-            squares.add(i * i);
-        }
-        return (int) squares.stream()
-                .map(Object::toString)
+        return (int) IntStream.rangeClosed(0, n)
+                .map(i -> i*i)
+                .mapToObj(Integer::toString)
                 .collect(Collectors.joining(""))
                 .chars()
                 .filter(ch -> ch == d + '0')
