@@ -31,6 +31,7 @@ public class Kata2 {
         return null;
     }
     public static String[] stringToArray(String s) {
+        return s.split(" ");
     }
 
 
