@@ -1,9 +1,10 @@
 package Kata2;
+
 import java.util.ArrayList;
-import java.util.List;
 import java.util.stream.*;
 
 public class Kata2 {
+    public void main () {}
 
     public static int squareDigits(int n) {
         System.out.println("hello");
@@ -29,7 +30,7 @@ public class Kata2 {
         }
         if (bmi > 30) {
             return "Obese";
-        };
+        }
         return null;
     }
     public static String[] stringToArray(String s) {
@@ -51,6 +52,21 @@ public class Kata2 {
     }
 
     public static int nbDig(int n, int d) {
-return 2;
+        ArrayList<Integer> squares = new ArrayList();
+        for (int i = 0; i <= n; i++) {
+            squares.add(i*i);
+        };
+       String halfway = squares.stream()
+               .map(Object::toString)
+               .collect(Collectors.joining(""));
+       System.out.println("string: " +halfway);
+       int end = (int) halfway
+               .chars()
+               .peek(e -> System.out.println("STREAM(" + e + "), (char)ch = " + (char)e + ", (char) d: " + d ))
+               .filter(ch -> ch == d+48)
+               .peek(e -> System.out.println("filtered " + e) )
+               .count();
+       System.out.println("end " + end);
+       return end;
     }
 }

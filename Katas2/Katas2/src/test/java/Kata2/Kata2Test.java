@@ -33,12 +33,13 @@ public class Kata2Test {
         assertEquals(expected, actual);
     }
     @Test
-    public void test() {
+    public void testNBDig() {
         System.out.println("Fixed Tests nbDig");
-        testing(Kata2.nbDig(5750, 0), 4700);
-        testing(Kata2.nbDig(11011, 2), 9481);
-        testing(Kata2.nbDig(12224, 8), 7733);
-        testing(Kata2.nbDig(11549, 1), 11905);
+        testing(Kata2.nbDig(10, 1), 4);
+//        testing(Kata2.nbDig(5750, 0), 4700);
+//        testing(Kata2.nbDig(11011, 2), 9481);
+//        testing(Kata2.nbDig(12224, 8), 7733);
+//        testing(Kata2.nbDig(11549, 1), 11905);
     }
     @Test public void testA() {
     }

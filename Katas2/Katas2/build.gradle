@@ -1,10 +1,21 @@
 plugins {
     id 'java'
+    id 'application'
 }
+apply plugin : 'java'
 
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+mainClassName = 'Kata2.Kata2'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+}
 repositories {
     mavenCentral()
 }
@@ -13,7 +24,6 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
     implementation("com.google.guava:guava:31.1-jre")
-
 }
 
 test {
@@ -21,12 +31,14 @@ test {
     testLogging.showStandardStreams = true
 }
 
-tasks.withType(Test) {
-    useJUnitPlatform()
-    testLogging {
-        events("passed", "skipped", "failed")
-    }
-}
+//tasks.withType(Test) {
+//    useJUnitPlatform()
+//    testLogging {
+//        events("passed", "skipped", "failed")
+//    }
+//}
+
+
 //if (hasProperty('buildScan')) {
 //    buildScan {
 //        termsOfServiceUrl = 'https://gradle.com/terms-of-service'
