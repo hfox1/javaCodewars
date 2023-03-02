@@ -37,12 +37,16 @@ public class Kata2 {
     }
 
     public static int findShort(String s) {
-    String[] arr = s.split(" ");
-    int shortest = arr[0].length();
-    for (String word : arr) {
-        if (word.length() < shortest) {
-            shortest = word.length();
-        };
-    } return shortest;
+//    String[] arr = s.split(" ");
+//    int shortest = arr[0].length();
+//    for (String word : arr) {
+//        if (word.length() < shortest) {
+//            shortest = word.length();
+//        };
+//    } return shortest;
+    return Stream.of(s.split(" "))
+            .mapToInt(String::length)
+            .min()
+            .getAsInt();
     }
 }
