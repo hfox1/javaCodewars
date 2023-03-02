@@ -14,10 +14,10 @@ public class Kata2Test {
 
     }
     @Test public void bmiTest() {
-        assertEquals("Underweight", Kata2.bmi(10, 3));
-        assertEquals("Normal", Kata2.bmi(100, 2));
-        assertEquals("Overweight", Kata2.bmi(101, 2));
-        assertEquals("Obese", Kata2.bmi(60, 1.3));
+        assertEquals( "Underweight", Kata2.bmi(10, 3), "one");
+        assertEquals("Normal", Kata2.bmi(100, 2), "two");
+        assertEquals("Overweight", Kata2.bmi(101, 2), "three");
+        assertEquals("Obese", Kata2.bmi(60, 1.3), "four");
     }
     @Test public void aTest() {
 
