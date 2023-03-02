@@ -1,4 +1,6 @@
 package Kata2;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.*;
 
 public class Kata2 {
@@ -35,6 +37,12 @@ public class Kata2 {
     }
 
     public static int findShort(String s) {
-
+    String[] arr = s.split(" ");
+    int shortest = arr[0].length();
+    for (String word : arr) {
+        if (word.length() < shortest) {
+            shortest = word.length();
+        };
+    } return shortest;
     }
 }
