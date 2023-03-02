@@ -1,7 +1,9 @@
 package Kata2;
 
 import java.util.ArrayList;
+import java.util.regex.Matcher;
 import java.util.stream.*;
+import com.google.common.base.CharMatcher;
 
 public class Kata2 {
     public void main () {}
@@ -59,5 +61,11 @@ public class Kata2 {
                 .chars()
                 .filter(ch -> ch == d + '0')
                 .count();
+    }
+
+    public static boolean stringEnds(String str, String ending) {
+        String newEnding = ending.replaceAll("[\\[\\]\\(\\)\\{\\}\\+\\*\\^\\$\\\\\\|\\.\\?]", "\\\\$0");
+        String regex = newEnding+"$";
+    return str.equals(str.replaceAll(regex, "")+ending);
     }
 }
