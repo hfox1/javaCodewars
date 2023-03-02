@@ -19,7 +19,12 @@ public class Kata2Test {
         assertEquals("Overweight", Kata2.bmi(101, 2), "three");
         assertEquals("Obese", Kata2.bmi(60, 1.3), "four");
     }
-    @Test public void aTest() {
+    @Test public void testStringToArray() {
+        assertArrayEquals(new String[]{"Robin", "Singh"}, Kata2.stringToArray("Robin Singh"));
+        assertArrayEquals(new String[]{"I", "love", "arrays", "they", "are", "my", "favorite"}, Kata2.stringToArray("I love arrays they are my favorite"));
+
+    }
+    @Test public void testA() {
 
     }
 }
