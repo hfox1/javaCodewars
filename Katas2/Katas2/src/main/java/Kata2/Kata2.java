@@ -54,19 +54,13 @@ public class Kata2 {
     public static int nbDig(int n, int d) {
         ArrayList<Integer> squares = new ArrayList();
         for (int i = 0; i <= n; i++) {
-            squares.add(i*i);
-        };
-       String halfway = squares.stream()
-               .map(Object::toString)
-               .collect(Collectors.joining(""));
-       System.out.println("string: " +halfway);
-       int end = (int) halfway
-               .chars()
-               .peek(e -> System.out.println("STREAM(" + e + "), (char)ch = " + (char)e + ", (char) d: " + d ))
-               .filter(ch -> ch == d+48)
-               .peek(e -> System.out.println("filtered " + e) )
-               .count();
-       System.out.println("end " + end);
-       return end;
+            squares.add(i * i);
+        }
+        return (int) squares.stream()
+                .map(Object::toString)
+                .collect(Collectors.joining(""))
+                .chars()
+                .filter(ch -> ch == d + '0')
+                .count();
     }
 }
