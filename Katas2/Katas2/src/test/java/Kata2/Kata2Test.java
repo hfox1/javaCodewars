@@ -24,8 +24,12 @@ public class Kata2Test {
         assertArrayEquals(new String[]{"I", "love", "arrays", "they", "are", "my", "favorite"}, Kata2.stringToArray("I love arrays they are my favorite"));
 
     }
+    @Test public void testFindShort() {
+        assertEquals(3, Kata2.findShort("bitcoin take over the world maybe who knows perhaps"));
+        assertEquals(3, Kata2.findShort("turns out random test cases are easier than writing out basic ones"));
+        assertEquals(2, Kata2.findShort("Let's travel abroad shall we"));
+    }
     @Test public void testA() {
-
     }
 }
 

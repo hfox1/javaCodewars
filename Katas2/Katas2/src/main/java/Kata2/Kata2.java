@@ -34,5 +34,7 @@ public class Kata2 {
         return s.split(" ");
     }
 
+    public static int findShort(String s) {
 
+    }
 }
