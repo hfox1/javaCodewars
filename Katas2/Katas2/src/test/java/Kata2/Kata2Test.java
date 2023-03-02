@@ -29,6 +29,17 @@ public class Kata2Test {
         assertEquals(3, Kata2.findShort("turns out random test cases are easier than writing out basic ones"));
         assertEquals(2, Kata2.findShort("Let's travel abroad shall we"));
     }
+    private static void testing(int actual, int expected) {
+        assertEquals(expected, actual);
+    }
+    @Test
+    public void test() {
+        System.out.println("Fixed Tests nbDig");
+        testing(Kata2.nbDig(5750, 0), 4700);
+        testing(Kata2.nbDig(11011, 2), 9481);
+        testing(Kata2.nbDig(12224, 8), 7733);
+        testing(Kata2.nbDig(11549, 1), 11905);
+    }
     @Test public void testA() {
     }
 }

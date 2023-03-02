@@ -49,4 +49,8 @@ public class Kata2 {
             .min()
             .getAsInt();
     }
+
+    public static int nbDig(int n, int d) {
+return 2;
+    }
 }
