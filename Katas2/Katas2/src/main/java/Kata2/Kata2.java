@@ -1,6 +1,7 @@
 package Kata2;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.stream.*;
 import com.google.common.base.CharMatcher;
@@ -64,8 +65,18 @@ public class Kata2 {
     }
 
     public static boolean stringEnds(String str, String ending) {
-        String newEnding = ending.replaceAll("[\\[\\]\\(\\)\\{\\}\\+\\*\\^\\$\\\\\\|\\.\\?]", "\\\\$0");
-        String regex = newEnding+"$";
-    return str.equals(str.replaceAll(regex, "")+ending);
+//      nice way with regex
+//        String newEnding = ending.replaceAll("[\\[\\]\\(\\)\\{\\}\\+\\*\\^\\$\\\\\\|\\.\\?]", "\\\\$0");
+//        String regex = newEnding+"$";
+//    return str.equals(str.replaceAll(regex, "")+ending);
+//
+        // comparing char values as Integers
+           List<Integer> strChars = new StringBuilder(str).reverse().chars().mapToObj(Integer::valueOf).collect(Collectors.toList());
+           List<Integer> endingChars = new StringBuilder(ending).reverse().chars().mapToObj(Integer::valueOf).collect(Collectors.toList());
+           int endingLength = ending.length() > str.length() ? str.length() : endingChars.size();
+        return  strChars.subList(0, endingLength).equals(endingChars);
+
     }
+
+
 }
